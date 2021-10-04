@@ -1,0 +1,75 @@
+class Node<E>{
+	public E element;
+	//public Node<E> prev;
+	public Node<E> next;
+	
+	public Node(E e){ // def __init__ in python
+		element = e;
+		next = null;
+	}
+}
+@SuppressWarnings("rawtypes")
+public class Queue {
+		Node head;
+		Node tail;
+		int size;
+	
+	public Queue() {
+		size = 0;
+		head = null;
+		tail = null;
+	}
+	
+	public int size() {
+		return size;
+	}
+	
+	public <E>  Object peek() {
+		return this.head.element;
+	}
+	
+	public boolean isEmpty() {
+		return (this.size == 0);
+	}
+	public Node poll() {
+		if (this.isEmpty()) {
+			System.out.print("Queue is empty \n"); 
+			return null;
+		}
+		Node node = this.head;
+		this.head = this.head.next;
+		this.size--; 
+		return  node;
+		
+	}
+	
+	@SuppressWarnings("unchecked")
+	public <E> void Offer(Node n) { //call class as paramet
+		if (this.head == null) {
+			this.head = n; //push du lieu vao stack
+			this.tail = n;
+			this.size++;
+			return ;
+		}
+		this.tail.next = n;
+		this.tail = n;
+		this.size++;
+	}
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		Node node1 = new Node<Integer>(111);
+		Node node2 = new Node<Integer>(222);
+		Node node3 = new Node<Integer>(333);
+		node1.next = node2;
+		node2.next = node3;
+		System.out.println(node3.element);
+		System.out.println(node2.next.element);
+		System.out.println(node1.next.next.element);
+		
+		Queue myq = new Queue();
+		myq.Offer(node1);
+		myq.Offer(node2);
+		myq.Offer(node3);
+		
+	}
+}
