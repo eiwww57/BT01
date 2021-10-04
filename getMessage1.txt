@@ -1,0 +1,5 @@
+	    	char b = queue[front];
+	    	for (int i = 0 ; i < c.length;i++) {
+	  	  queue[front]= b;
+			front = front + 1;
+			System.out.println("Received " + c[i]);

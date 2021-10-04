@@ -1,0 +1,7 @@
+AI is a big definition in AI we will learn about machine learning and deep learning
+- building AI project
+we will learn about workflow of project , how to choose an AI project , learn to work with a AI team,technitcal tools for AI team
+-building AI in your company
+in this case we will learn about roles of an Ai team and some pitfalls in AI to avoid
+-AI and society
+in this unit we will have a realistic view of AI ,discrimination and bias ,the adverse of AI,adversarial attacks on AI and AI in the developing economics,AI and jobs

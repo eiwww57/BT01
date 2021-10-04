@@ -1,0 +1,9 @@
+	try{
+	    if (queue.length <= 20) {
+	        // do stuff with your input 
+	    } else {
+	        throw new ArrayIndexOutOfBoundsException( "message is longer than 20");
+	    }
+	} catch(ArrayIndexOutOfBoundsException e){
+	    System.out.println ("Exceeds string length: " +e.getMessage());
+	}
